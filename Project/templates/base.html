@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand">Навигация</a>
@@ -30,6 +34,20 @@
     </nav>
 </head>
 <body>
-{% block content %} {%endblock%}
+<ul>
+if (menu[-1] == 1){
+<li>{{menu[0]}}</li>
+<li>{{menu[1]}}</li>
+<li>{{menu[2]}}</li>
+<li>{{menu[3]}}</li>
+<li>{{menu[4]}}</li>
+<li>{{menu[5]}}</li>}
+else{
+<li>{{menu[0]}}</li>
+<li>{{menu[1]}}</li>
+<li>{{menu[2]}}</li>
+<li>{{menu[3]}}</li>
+<li>{{menu[4]}}</li>}
+</ul>
 </body>
 </html>
