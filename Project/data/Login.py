@@ -1,7 +1,7 @@
 import sqlite3
 
 
-def register(Login, passwod):
+def Login(Login, passwod):
     connection = sqlite3.connect('database.sqlite')
     cursor = connection.cursor()
     data = cursor.execute(f"SELECT * FROM Pols WHERE Login={Login}")

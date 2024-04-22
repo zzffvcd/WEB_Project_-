@@ -15,7 +15,4 @@ def poisk_statbi():
             'idpols': row[4]
         }
     conn.close()
-    if data['url_image']:
-        return [data['id'], data['name'], data['url_image'], data['text'], data['idpols'], 0]
-    else:
-        return [data['id'], data['name'], data['text'], data['idpols'], 1]
+    return [data['id'], data['name'], data['text'], data['idpols']]
