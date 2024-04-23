@@ -1,4 +1,6 @@
-<link href='' rel='stylesheet' type='text/css'>
+{% extends "base.html" %}
+{% block content %}
+<link rel='stylesheet' type='text/css' href="/static/css/login.css">
 
 <title>Авторизация</title>
 <div class="login">
@@ -13,7 +15,8 @@
     <br>
     <input type="button" value="Войти" class="login-button"/>
     <br>
-    <a class="sign-up" href="wiki/register">Зарегистрироваться!</a>
+    <a class="sign-up" href="register">Зарегистрироваться!</a>
     <br>
   </div>
 </div>
+{% endblock %}

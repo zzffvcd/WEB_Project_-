@@ -1,0 +1,15 @@
+body {
+  background-color: rgb(155, 155, 155);
+  margin:0px;
+  font-family: 'Ubuntu', sans-serif;
+  background-size: 100% 110%;
+}
+
+#text {
+  width: 1000px;
+  height: 1000px;
+}
+
+#nazv {
+width: 100px;
+}

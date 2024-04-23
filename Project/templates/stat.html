@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Статья</title>
-</head>
-<body>
-  <h1>{{name}}</h1>
-  <h5>{{text}}</h5>
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<link href="/static/css/style.css" rel='stylesheet' type='text/css'>
+<h1>{{name}}</h1>
+<h5>{{text}}</h5>
+{% endblock %}
