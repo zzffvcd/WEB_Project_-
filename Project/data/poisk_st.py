@@ -6,13 +6,14 @@ def poisk_statbi():
     cursor = conn.cursor()
     cursor.execute("SELECT id, name, url_image, text, idpols FROM statbi")
     rows = cursor.fetchall()
+    data = []
     for row in rows:
-        data = {
+        data.append({
             'id': row[0],
             'name': row[1],
             'url_image': row[2],
             'text': row[3],
             'idpols': row[4]
-        }
+        })
     conn.close()
-    return [data['id'], data['name'], data['text'], data['idpols']]
+    return data

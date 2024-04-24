@@ -1,24 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
-<link href="/static/css/register.css" rel='stylesheet' type='text/css'>
-
-<title>Регистрации</title>
-<div class="login">
-  <div class="login-header">
-    <h1>Регистрация</h1>
-  </div>
-  <div class="login-form">
+<link rel='stylesheet' type='text/css' href="/static/css/login.css">
+<h1>Регистрация</h1>
+<form action="" method="post" class="login">
+    {{ form.hidden_tag() }}
     <h3>Логин:</h3>
-    <input type="text" placeholder="Электронная почта"/><br>
+    {{ form.Login(class="form-control", type="email") }}<br>
+    {% for error in form.Login.errors %}
+    <p class="alert alert-danger" role="alert">
+        {{ error }}
+    </p>
+    {% endfor %}
+    <br>
     <h3>Пароль:</h3>
-    <input type="password" placeholder="Пароль"/>
+    {{ form.Password(class="form-control", type="password") }}<br>
+    {% for error in form.Password.errors %}
+    <p class="alert alert-danger" role="alert">
+        {{ error }}
+    </p>
+    {% endfor %}
     <br>
-    <input type="button" value="Зарегистрироваться" class="login-button"/>
+    <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+    {{message}}
     <br>
-    <a class="sign-up" href="login">Авторизироваться!</a>
+    <a class="sign-up" href="login">Авторизоваться!</a>
     <br>
-    <a class="sign-up">{{a}}</a>
-    <br>
-  </div>
-</div>
+</form>
 {% endblock %}

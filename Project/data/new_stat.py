@@ -1,7 +1,7 @@
 import sqlite3
 
 
-def new_stat(Name, text):
+def new_stat(Name, text, Login, password):
     connection = sqlite3.connect('database.sqlite')
     cursor = connection.cursor()
     data = cursor.execute(f"SELECT * FROM Pols WHERE Login={Login}")

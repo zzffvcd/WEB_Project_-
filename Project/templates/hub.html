@@ -1,15 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-<link rel='stylesheet' type='text/css' href="/static/css/login.css">
-<head>
-    <title>Главная страница</title>
-</head>
-<body>
-<ul href="/stat/1">
-<h1>{{menu[0]}}</h1>
-<h1>{{menu[1]}}</h1>
-<h1>{{menu[2]}}</h1>
-<h1>{{menu[3]}}</h1>
-</ul>
-</body>
+<link rel='stylesheet' type='text/css' href="/static/css/register.css">
+{% for item in menu %}
+<h1>№ {{item.id}}</h1>
+<a href="/stat/{{item.id}}"><h1>{{item.name}}</h1></a>
+<img src="{{item.url_image}}" alt="Тут должно быть фото, но его пока нет">
+<h1>Описание</h1>
+<h1>{{item.text[:10]}}</h1>
+{% endfor %}
 {% endblock %}

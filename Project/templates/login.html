@@ -3,20 +3,29 @@
 <link rel='stylesheet' type='text/css' href="/static/css/login.css">
 
 <title>Авторизация</title>
-<div class="login">
-  <div class="login-header">
+<form action="" method="post" class="login">
+    {{ form.hidden_tag() }}
     <h1>Войти</h1>
-  </div>
-  <div class="login-form">
     <h3>Логин:</h3>
-    <input type="text" placeholder="Электронная почта"/><br>
+    {{ form.Login(class="form-control", type="email") }}<br>
+    {% for error in form.Login.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
     <h3>Пароль:</h3>
-    <input type="password" placeholder="Пароль"/>
+    {{ form.Password(class="form-control", type="password") }}<br>
+    {% for error in form.Password.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
     <br>
-    <input type="button" value="Войти" class="login-button"/>
+    <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+    <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+    <div>{{ message }}</div>
     <br>
     <a class="sign-up" href="register">Зарегистрироваться!</a>
     <br>
-  </div>
-</div>
+</form>
 {% endblock %}

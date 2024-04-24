@@ -78,7 +78,6 @@ h1, h2, h3, h4, h5, h6, a {
   cursor:pointer;
 }
 
-/*Media Querie*/
 @media only screen and (min-width : 150px) and (max-width : 530px){
   .login-form h3 {
     text-align:center;
@@ -90,4 +89,7 @@ h1, h2, h3, h4, h5, h6, a {
   .login-button {
     margin-bottom:10px;
   }
+}
+h1 {
+    text-align:center;
 }
